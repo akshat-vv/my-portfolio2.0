@@ -1,4 +1,5 @@
 import "./App.css";
+import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import { Header } from "./components/Header/Header";
 import Skills from "./components/Skills/Skills";
 import Work from "./components/Work/Work";

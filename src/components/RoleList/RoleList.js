@@ -1,5 +1,6 @@
 import React from "react";
 import "./RoleList.scss";
+import Typed from "react-typed";
 
 const RoleList = ({ role }) => {
   return (

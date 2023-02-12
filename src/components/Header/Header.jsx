@@ -1,9 +1,10 @@
 import React from "react";
 import "./Header.scss";
-import headerImage from "../../img/av-head-web.png";
+import headerImage from "../../img/av-face.png";
 import RoleList from "../RoleList/RoleList";
 import github from "../../img/github.png";
 import linkedin from "../../img/LinkedInNew.png";
+import ReactTyped from "react-typed";
 
 export const Header = ({ info }) => {
   return (
@@ -16,10 +17,15 @@ export const Header = ({ info }) => {
           <span>{info.user.name}</span>
         </div>
         <div className="h-lineThree">
-          <RoleList role={info.user.role} />
+          <ReactTyped
+            className="typed-text"
+            strings={info.user.role}
+            typeSpeed={40}
+            backSpeed={60}
+            loop
+          />
         </div>
-
-        <button className="button">{info.text.knowMoreText}</button>
+        {/* <button className="button">{info.text.knowMoreText}</button> */}
         <div className="h-icons">
           <img src={linkedin} alt="" />
           <img src={github} alt="" />
