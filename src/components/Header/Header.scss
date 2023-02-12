@@ -15,21 +15,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    height: 75vh;
   }
 
   .h-right-section {
     display: flex;
     img {
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-self: end;
       object-fit: contain;
-      height: 60vh;
+      height: 70vh;
     }
 
     @media screen and (max-width: 1023px) {
       img {
         height: 40vh;
+      }
+      #av-head {
+        content: url("../../img/av-face.png");
       }
     }
 
@@ -41,6 +46,7 @@
         content: url("../../img/av-face.png");
       }
     }
+
   }
 
   .h-left-section {
@@ -48,9 +54,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    @media screen and (max-width: 579px) {
+    
+    @media screen and (max-width: 1023px) {
       text-align: center;
-      align-items: inherit;
+      align-items: center;
       width: unset;
     }
 
@@ -103,11 +110,32 @@
   .h-icons {
     display: flex;
     gap: 20px;
+    margin-top: 10px;
     transform: scale(75%);
     margin-left: -15px;
 
-    @media screen and (min-width: 580px) {
+    @media screen and (min-width: 1024px) {
       align-self: self-start;
     }
+
+    @media screen and (max-width:1023px) {
+      img{
+        height: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:580px) and (max-width:912px) {
+  .h-lineOne{
+    font-size: 50px !important;
+  }
+
+  .h-lineTwo{
+    font-size: 50px !important;
+  }
+
+  .h-lineThree{
+    font-size: 20px !important;
   }
 }

@@ -5,7 +5,7 @@ const SkillList = ({ skills }) => {
   return (
     <div className="sl-container">
       <div className="sl-title">
-        <span>Skills</span> set
+        <span>Skill</span> set
       </div>
       <div className="sl-list">
         {skills.map((skill) => {

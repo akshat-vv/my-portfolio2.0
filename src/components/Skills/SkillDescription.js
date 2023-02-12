@@ -1,4 +1,5 @@
 import React from "react";
+import Resume from './Resume.pdf'
 
 const SkillDescription = () => {
   return (
@@ -14,7 +15,9 @@ const SkillDescription = () => {
         trends.
       </div>
       <div className="sd-footer">
+        <a href={Resume} download>
         <button className="button">Download Resume</button>
+        </a>
       </div>
     </div>
   );

@@ -27,16 +27,35 @@ const information = {
       role: "Software Developer",
       company: "Amdocs",
       time: "April 2022 - Present",
+      desc: [
+        "Building and maintaining the user interface of a web application using the React JavaScript library.",
+        "Responsible for creating reusable components and implementing the application's visual design and user interactions.",
+        "Integrating new functionality in existing application.",
+        "Managing the application's state and props to ensure that the UI is updated correctly using Redux.",
+        "Integrating the application with back-end APIs and services.",
+        "Collaborating with back-end developers to ensure that the front-end and back- end of the application work together seamlessly.",
+        "Optimizing the application's performance and ensuring that it is accessible to users with different abilities.",
+      ],
     },
     {
       role: "Ass. System Engineer",
       company: "TCS",
       time: "November 2020 - April 2022",
+      desc: [
+        "Create Single page application with the latest style guide provided by the business.",
+        "Creating new web pages from scratch and add functionality to it.",
+        "Integrating new features to the existing application on different pages.",
+        "Managing the application's state using Redux, including creating actions and reducers to handle updates to the state.",
+      ],
     },
     {
       role: "UI Developer",
       company: "Quantic Clouds",
       time: "May 2020 - October 2020",
+      desc: [
+        "Designing and implementing layouts: Use HTML and CSS to design and implement the layout of web pages, including the placement of elements such as text, images, and buttons.",
+        "Creating responsive design: Use CSS to create responsive designs that adapt to different screen sizes and resolutions, ensuring that the web pages look good on different devices.",
+      ],
     },
   ],
 };

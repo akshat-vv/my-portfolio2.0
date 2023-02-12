@@ -22,7 +22,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
+  justify-content: center;
 }
 
 .w-card {
@@ -32,14 +34,15 @@
   box-shadow: 0px 3px 9px rgba(77, 186, 190, 0.28);
   border-radius: 17px;
   display: flex;
+  transition: transform .3s;
   flex-direction: column;
   gap: 5px;
-  padding: 30px;
+  padding: 11px;
 
   .card-title {
     font-style: normal;
     font-weight: 500;
-    font-size: 36.43px;
+    font-size:1.9rem;
     line-height: 165.52%;
   }
 
@@ -51,21 +54,24 @@
 
   .card-company {
     font-weight: 300;
-    font-size: 29.43px;
+    font-size: 1.3rem;
     line-height: 165.52%;
   }
 
-  .card-year {
+  .card-date{
+    font-weight: 200;
+    font-size: 0.9rem;
     font-weight: 300;
-    font-size: 22.8233px;
     line-height: 165.52%;
   }
 }
 
 .w-card:hover {
-  background: var(--blue);
-  transition: 1s;
+  transform: scale(1.03);
+}
 
+.isSelected{
+  background: var(--blue);
   * {
     color: #ffffff;
   }
@@ -75,10 +81,24 @@
   }
 }
 
+
 .w-card-out {
   // border: 2px solid black;
   // border-radius: 27px;
   // padding: 15px;
+}
+
+.w-desc-container { 
+  border: 1px solid var(--blue);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: auto;
+  transition: 0.4s;
+
+  .w-desc{
+    line-height: 2;
+  }
 }
 
 @media screen and (max-width: 579px) {
@@ -90,14 +110,14 @@
   }
 
   .w-title {
-    font-size: 39px;
+    font-size: 37px;
   }
 
   .w-card {
     width: 288px;
 
     .card-title {
-      font-size: 29.43px;
+      font-size: 27.43px;
     }
   }
 }

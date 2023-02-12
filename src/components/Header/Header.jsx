@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import headerImage from "../../img/av-face.png";
+import headerImage from "../../img/av-head-web.png";
 import RoleList from "../RoleList/RoleList";
 import github from "../../img/github.png";
 import linkedin from "../../img/LinkedInNew.png";
@@ -25,7 +25,6 @@ export const Header = ({ info }) => {
             loop
           />
         </div>
-        {/* <button className="button">{info.text.knowMoreText}</button> */}
         <div className="h-icons">
           <img src={linkedin} alt="" />
           <img src={github} alt="" />
