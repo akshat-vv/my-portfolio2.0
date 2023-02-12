@@ -28,6 +28,11 @@ const Work = ({ info }) => {
         })}
       </div>
       <div className="w-desc-container">
+        <div className="w-desc-title-container">
+          <div className="w-desc-title">
+            My Responsiblities @ {desc.company}
+          </div>
+        </div>
         <WorkDesc description={desc.desc} />
       </div>
     </div>
