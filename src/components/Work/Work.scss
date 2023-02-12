@@ -6,6 +6,7 @@
   gap: 40px;
   flex-direction: column;
   align-items: center;
+
 }
 
 .w-title {
@@ -139,5 +140,11 @@
     .card-title {
       font-size: 27.43px;
     }
+  }
+}
+
+@media screen and (min-width:580px) and (max-width:1446px) {
+  .w-container{
+    margin: 100px 30px;
   }
 }

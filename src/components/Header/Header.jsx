@@ -7,6 +7,10 @@ import linkedin from "../../img/LinkedInNew.png";
 import ReactTyped from "react-typed";
 
 export const Header = ({ info }) => {
+
+  const { role } = info.user;
+  const roleString = role.join(' | ');
+
   return (
     <div className="h-container">
       <div className="h-left-section">
@@ -19,7 +23,7 @@ export const Header = ({ info }) => {
         <div className="h-lineThree">
           <ReactTyped
             className="typed-text"
-            strings={info.user.role}
+            strings={[roleString]}
             typeSpeed={40}
             backSpeed={60}
             loop
