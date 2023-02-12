@@ -68,6 +68,11 @@
 
 .w-card:hover {
   transform: scale(1.03);
+
+  .card-line{
+    width: 250px;
+    transition: 1s;
+  }
 }
 
 .isSelected{
@@ -94,11 +99,12 @@
   border-radius: 20px;
   max-width: 800px;
   margin: auto;
-  transition: 0.4s;
+
 
   .w-desc{
     line-height: 2;
   }
+
 }
 
 @media screen and (max-width: 579px) {

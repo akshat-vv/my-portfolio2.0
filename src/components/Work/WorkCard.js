@@ -14,7 +14,7 @@ const WorkCard = ({ work, index, updateDesc, desc }) => {
       <div className={`w-card ${desc === work ? "isSelected" : " "}`}>
         <div className="card-title">{work.role}</div>
         <div className="card-line" />
-        <div className="card-company">{work.company}</div>
+        <div className="card-company">@ {work.company}</div>
         <div className="card-date">{work.time}</div>
       </div>
     </div>
