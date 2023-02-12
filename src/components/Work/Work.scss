@@ -1,0 +1,103 @@
+.w-container {
+  display: flex;
+  max-width: 100%;
+  margin: 100px 100px;
+  font-family: "Jost", sans-serif;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.w-title {
+  font-size: 49px;
+  color: var(--blue);
+
+  span {
+    color: black;
+    font-weight: 600;
+  }
+}
+
+.w-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.w-card {
+  width: 350px;
+  height: 150px;
+  background: #ffffff;
+  box-shadow: 0px 3px 9px rgba(77, 186, 190, 0.28);
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 30px;
+
+  .card-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36.43px;
+    line-height: 165.52%;
+  }
+
+  .card-line {
+    width: 190px;
+    height: 3px;
+    background: var(--blue);
+  }
+
+  .card-company {
+    font-weight: 300;
+    font-size: 29.43px;
+    line-height: 165.52%;
+  }
+
+  .card-year {
+    font-weight: 300;
+    font-size: 22.8233px;
+    line-height: 165.52%;
+  }
+}
+
+.w-card:hover {
+  background: var(--blue);
+  transition: 1s;
+
+  * {
+    color: #ffffff;
+  }
+
+  .card-line {
+    background: #ffffff;
+  }
+}
+
+.w-card-out {
+  // border: 2px solid black;
+  // border-radius: 27px;
+  // padding: 15px;
+}
+
+@media screen and (max-width: 579px) {
+  .w-container {
+    margin: 100px 21px;
+  }
+  .w-content {
+    flex-direction: column;
+  }
+
+  .w-title {
+    font-size: 39px;
+  }
+
+  .w-card {
+    width: 288px;
+
+    .card-title {
+      font-size: 29.43px;
+    }
+  }
+}

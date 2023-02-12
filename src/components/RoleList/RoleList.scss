@@ -1,0 +1,20 @@
+.role-text {
+  display: block;
+  height: 38px;
+  width: 0%;
+  overflow: hidden;
+  animation: animate infinite 3s;
+
+  @media screen and (max-width: 579px) {
+    height: 15px;
+  }
+}
+
+@keyframes animate {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
