@@ -57,12 +57,13 @@
     .project-card{
         height: 350px;
     }
-
-
 }
 
 @media screen and (max-width:664px) {
     .project-heading{
         font-size: 2.5rem;
+    }
+    .project-card{
+        height: 350px;
     }
 }
