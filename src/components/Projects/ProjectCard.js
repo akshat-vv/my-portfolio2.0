@@ -7,9 +7,14 @@ const ProjectCard = ({ project }) => {
   {
     return (
       <div className="project-card">
-        <div className="project-title">{project.name}</div>
-        <div className="project-tech">{techString}</div>
-        <div className="project-desc">{project.description}</div>
+        <div className="p-left">
+          <div className="project-title">{project.name}</div>
+          <div className="project-tech">{techString}</div>
+          <div className="project-desc">{project.description}</div>
+        </div>
+        <div className="p-right">
+          <img src={project.image} alt="Screen" />
+        </div>
       </div>
     );
   }

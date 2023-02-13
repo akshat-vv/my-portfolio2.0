@@ -9,41 +9,45 @@ const Project = ({ info }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1180,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
+    // responsive: [
+    //   {
+    //     breakpoint: 1200,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 1180,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
 
-      {
-        breakpoint: 664,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    //   {
+    //     breakpoint: 664,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
   };
   return (
-    <div className="project-container">
-      <div className="project-heading">My Projects</div>
-      <Slider {...settings}>
-        {info.projects.map((project) => {
-          return <ProjectCard project={project} />;
-        })}
-      </Slider>
+    <div className="project-section">
+      <div className="project-container">
+        <div className="project-heading">
+          My <span> Projects</span>
+        </div>
+        <Slider {...settings}>
+          {info.projects.map((project) => {
+            return <ProjectCard project={project} />;
+          })}
+        </Slider>
+      </div>
     </div>
   );
 };
