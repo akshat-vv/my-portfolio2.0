@@ -116,11 +116,13 @@
 
     @media screen and (min-width: 1024px) {
       align-self: self-start;
+
     }
 
     @media screen and (max-width:1023px) {
       img{
         height: 60%;
+        visibility: hidden;
       }
     }
   }

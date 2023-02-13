@@ -58,6 +58,32 @@ const information = {
       ],
     },
   ],
+  projects: [
+    {
+      name: "Screen Sharing tool",
+      description:
+        "A screen sharing tool using Java is a software application that allows one user to share their computer screen with another user over the internet. The application captures screenshots of the host's screen at regular intervals and sends them to the client in real-time, allowing the client to see the host's screen as if they were sitting in front of it.",
+      techStack: ["Jave", "Swing"],
+    },
+    {
+      name: "Audio Book Library",
+      description:
+        "An audio book library project made using React, HTML, CSS, and JavaScript is a web application that allows users to access and listen to audio books.The application uses JavaScript to handle the functionality of the application, such as routing, user authentication, and audio playback.",
+      techStack: ["React", "HTML", "CSS", "JS"],
+    },
+    {
+      name: "Weather App",
+      description:
+        "A weather app using React is a web or mobile application that allows users to view current weather information and forecast for a specific location.",
+      techStack: ["HTML", "CSS", "JS"],
+    },
+    {
+      name: "To-Do List App",
+      description:
+        "A to-do list app using React Native is a mobile application that allows users to create and manage a list of tasks, or to- do's, that they need to complete. The app would be built using the React Native framework, which allows developers to use React to build mobile apps for iOS and Android.",
+      techStack: ["React Native", "HTML", "CSS", "JS"],
+    },
+  ],
 };
 
 export default information;

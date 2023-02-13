@@ -2,6 +2,7 @@
   "name": "starter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://akshat-vv.github.io/my-portfolio2.0",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.14.1",
@@ -10,16 +11,23 @@
     "bootstrap": "^5.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-elastic-carousel": "^0.11.5",
+    "react-grid-carousel": "^1.0.1",
     "react-redux": "^8.0.5",
+    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.0",
+    "react-slick": "^0.29.0",
     "react-typed": "^1.2.0",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
