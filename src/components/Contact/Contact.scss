@@ -1,0 +1,76 @@
+.contact-container {
+  width: 100%;
+  height: 60vh;
+  padding: 0 70px;
+  background: var(--blueGradient);
+  margin-top: 70px;
+  font-family: "Jost";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .contact-left {
+    // flex: 1;
+    .contact-text {
+      font-size: 4rem;
+      color: white;
+    }
+  }
+
+  .contact-right {
+    flex: 0.5;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 42vh;
+
+      align-items: center;
+
+      .button {
+        background: white;
+        color: var(--blue);
+      }
+
+      .user {
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        border: none;
+        line-height: 3;
+      }
+    }
+  }
+
+  #message {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    // padding-bottom: 50px;
+    .contact-left {
+      display: flex;
+      justify-content: center;
+
+      .contact-text {
+        font-size: 3rem;
+        color: white;
+        line-height: 2.4;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact-container .contact-left .contact-text {
+    font-size: 2rem;
+  }
+}

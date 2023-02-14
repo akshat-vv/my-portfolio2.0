@@ -1,12 +1,11 @@
 .w-container {
   display: flex;
   max-width: 100%;
-  margin: 100px 100px;
+  margin: 100px 100px 60px 100px;
   font-family: "Jost", sans-serif;
   gap: 40px;
   flex-direction: column;
   align-items: center;
-
 }
 
 .w-title {
@@ -35,7 +34,7 @@
   box-shadow: 0px 3px 9px rgba(77, 186, 190, 0.28);
   border-radius: 17px;
   display: flex;
-  transition: transform .3s;
+  transition: transform 0.3s;
   flex-direction: column;
   gap: 5px;
   padding: 11px;
@@ -43,7 +42,7 @@
   .card-title {
     font-style: normal;
     font-weight: 500;
-    font-size:1.9rem;
+    font-size: 1.9rem;
     line-height: 165.52%;
   }
 
@@ -59,7 +58,7 @@
     line-height: 165.52%;
   }
 
-  .card-date{
+  .card-date {
     font-weight: 200;
     font-size: 0.9rem;
     font-weight: 300;
@@ -70,14 +69,14 @@
 .w-card:hover {
   transform: scale(1.03);
 
-  .card-line{
+  .card-line {
     width: 250px;
     transition: 1s;
   }
 }
 
-.isSelected{
-  background: linear-gradient(180deg, #009398 0%, #4DBABE 100%);
+.isSelected {
+  background: linear-gradient(180deg, #009398 0%, #4dbabe 100%);
   * {
     color: #ffffff;
   }
@@ -87,15 +86,14 @@
   }
 }
 
-
 .w-card-out {
   // border: 2px solid black;
   // border-radius: 27px;
   // padding: 15px;
 }
 
-.w-desc-container { 
-  background: #FFFFFF;
+.w-desc-container {
+  background: #ffffff;
   box-shadow: 0px 3px 21px rgba(77, 186, 190, 0.28);
   border-radius: 17px;
   padding: 20px;
@@ -104,27 +102,26 @@
   max-height: 100%;
   transition: max-height 3s ease-out;
 
-  .w-desc{
+  .w-desc {
     line-height: 2;
   }
-
 }
 
-.w-desc-title-container{
-  background: linear-gradient(180deg, #009398 0%, #4DBABE 100%);
+.w-desc-title-container {
+  background: linear-gradient(180deg, #009398 0%, #4dbabe 100%);
   padding: 10px;
   border-radius: 10px;
-  color:#FFFFFF;
+  color: #ffffff;
   margin-bottom: 10px;
 
-  .w-desc-title{
+  .w-desc-title {
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 579px) {
   .w-container {
-    margin: 100px 21px;
+    margin: 100px 21px 50px 21px;
   }
   .w-content {
     flex-direction: column;
@@ -143,8 +140,8 @@
   }
 }
 
-@media screen and (min-width:580px) and (max-width:1446px) {
-  .w-container{
+@media screen and (min-width: 580px) and (max-width: 1446px) {
+  .w-container {
     margin: 100px 30px;
   }
 }
