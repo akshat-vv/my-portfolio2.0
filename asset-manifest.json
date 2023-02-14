@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio2.0/static/css/main.42f90f96.css",
-    "main.js": "/my-portfolio2.0/static/js/main.1368ed20.js",
+    "main.css": "/my-portfolio2.0/static/css/main.ab26e844.css",
+    "main.js": "/my-portfolio2.0/static/js/main.c84615cc.js",
     "static/media/av-head-web.png": "/my-portfolio2.0/static/media/av-head-web.d85ae60fca53b41b1273.png",
     "static/media/weather.jpeg": "/my-portfolio2.0/static/media/weather.f85c00ae2e500acc3e3c.jpeg",
     "static/media/audio.jpeg": "/my-portfolio2.0/static/media/audio.84a68c10ed483996e2e5.jpeg",
@@ -12,11 +12,11 @@
     "static/media/screen.jpeg": "/my-portfolio2.0/static/media/screen.de4f24739acb70c17377.jpeg",
     "static/media/Resume.pdf": "/my-portfolio2.0/static/media/Resume.44b59a3fbb9c29030315.pdf",
     "index.html": "/my-portfolio2.0/index.html",
-    "main.42f90f96.css.map": "/my-portfolio2.0/static/css/main.42f90f96.css.map",
-    "main.1368ed20.js.map": "/my-portfolio2.0/static/js/main.1368ed20.js.map"
+    "main.ab26e844.css.map": "/my-portfolio2.0/static/css/main.ab26e844.css.map",
+    "main.c84615cc.js.map": "/my-portfolio2.0/static/js/main.c84615cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.42f90f96.css",
-    "static/js/main.1368ed20.js"
+    "static/css/main.ab26e844.css",
+    "static/js/main.c84615cc.js"
   ]
 }
