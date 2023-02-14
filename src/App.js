@@ -7,16 +7,22 @@ import information from "./constants/global";
 import Project from "./components/Projects/Project";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import { useState } from "react";
+import LoadingOverlay from "react-loading-overlay";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
     <div className="App">
-      <Header info={information} />
-      <Skills info={information} />
-      <Work info={information} />
-      <Project info={information} />
-      <Contact />
-      <Footer />
+      <LoadingOverlay active={isLoading} spinner text="Loading your content...">
+        <Header info={information} />
+        <Skills info={information} />
+        <Work info={information} />
+        <Project info={information} />
+        <Contact setIsLoading={setIsLoading} />
+        <Footer />
+      </LoadingOverlay>
     </div>
   );
 }

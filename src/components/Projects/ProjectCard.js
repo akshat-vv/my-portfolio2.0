@@ -13,7 +13,11 @@ const ProjectCard = ({ project }) => {
           <div className="project-desc">{project.description}</div>
         </div>
         <div className="p-right">
-          <img src={project.image} alt="Screen" />
+          <img
+            src={project.image}
+            alt="Screen"
+            id={project.name.split(" ")[0]}
+          />
         </div>
       </div>
     );

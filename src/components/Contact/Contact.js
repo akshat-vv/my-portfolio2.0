@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import Modal from "./Modal";
 
-const Contact = () => {
+import { BallTriangle } from "react-loader-spinner";
+
+const Contact = ({ setIsLoading }) => {
   const form = useRef();
+  const [showModal, setShowModal] = useState(false);
 
   const sendEmail = (e) => {
+    setIsLoading(true);
     e.preventDefault();
 
     emailjs
@@ -19,11 +24,14 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setIsLoading(false);
+          setShowModal(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
+    e.target.reset();
   };
 
   return (
@@ -53,6 +61,19 @@ const Contact = () => {
           />
           <input type="submit" value="Send" className="button" />
         </form>
+        {showModal && <Modal setShowModal={setShowModal} />}
+        {/* {isLoading && (
+          <BallTriangle
+            height={100}
+            width={100}
+            radius={5}
+            color="#4fa94d"
+            ariaLabel="ball-triangle-loading"
+            wrapperClass={{}}
+            wrapperStyle=""
+            visible={true}
+          />
+        )} */}
       </div>
     </div>
   );
