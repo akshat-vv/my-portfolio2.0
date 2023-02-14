@@ -40,13 +40,14 @@
         display: flex;
         align-items: center;
         border: none;
-        line-height: 3;
+        // line-height: 3;
       }
     }
   }
 
   #message {
     height: 150px;
+    padding-top: 10px;
   }
 }
 
