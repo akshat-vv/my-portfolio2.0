@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-portfolio2.0/static/css/main.f123dce9.css",
+    "main.css": "/my-portfolio2.0/static/css/main.1303d28e.css",
     "main.js": "/my-portfolio2.0/static/js/main.c9743b48.js",
     "static/media/av-head-web.png": "/my-portfolio2.0/static/media/av-head-web.d85ae60fca53b41b1273.png",
     "static/media/weather.jpeg": "/my-portfolio2.0/static/media/weather.f85c00ae2e500acc3e3c.jpeg",
@@ -9,14 +9,15 @@
     "static/media/av-head-mob.png": "/my-portfolio2.0/static/media/av-head-mob.043ebb656de5448e0545.png",
     "static/media/Jost.ttf": "/my-portfolio2.0/static/media/Jost.6de07354a7108bacf175.ttf",
     "static/media/av-head-bg-new.png": "/my-portfolio2.0/static/media/av-head-bg-new.d0f84748baa974aad084.png",
+    "static/media/contactBG.png": "/my-portfolio2.0/static/media/contactBG.b574eaa0d6b1259f9b9c.png",
     "static/media/screen.jpeg": "/my-portfolio2.0/static/media/screen.de4f24739acb70c17377.jpeg",
     "static/media/Resume.pdf": "/my-portfolio2.0/static/media/Resume.44b59a3fbb9c29030315.pdf",
     "index.html": "/my-portfolio2.0/index.html",
-    "main.f123dce9.css.map": "/my-portfolio2.0/static/css/main.f123dce9.css.map",
+    "main.1303d28e.css.map": "/my-portfolio2.0/static/css/main.1303d28e.css.map",
     "main.c9743b48.js.map": "/my-portfolio2.0/static/js/main.c9743b48.js.map"
   },
   "entrypoints": [
-    "static/css/main.f123dce9.css",
+    "static/css/main.1303d28e.css",
     "static/js/main.c9743b48.js"
   ]
 }
