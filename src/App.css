@@ -50,6 +50,8 @@
   padding: 18px 47px;
   transition: background .5s,color .4s;
   transition-timing-function: ease-in-out;
+  font-weight: 400;
+  font-family: "Jost";
 }
 
 .button:hover{

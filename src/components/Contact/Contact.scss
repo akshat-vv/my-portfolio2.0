@@ -3,11 +3,16 @@
   height: 60vh;
   padding: 0 70px;
   background: var(--blueGradient);
+  background-color: var(--blue);
   margin-top: 70px;
   font-family: "Jost";
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-image: url("../../img/contactBG.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .contact-left {
     // flex: 1;
