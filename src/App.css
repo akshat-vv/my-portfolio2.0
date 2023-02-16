@@ -64,3 +64,7 @@
   color:var(--orange);
   border: 1px solid var(--orange);
 } */
+
+.App ._loading_overlay_wrapper ._loading_overlay_content {
+  margin-bottom: 280px;
+}

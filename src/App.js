@@ -15,7 +15,11 @@ function App() {
 
   return (
     <div className="App">
-      <LoadingOverlay active={isLoading} spinner text="Loading your content...">
+      <LoadingOverlay
+        active={isLoading}
+        spinner
+        text="Sending your information..."
+      >
         <Header info={information} />
         <Skills info={information} />
         <Work info={information} />
