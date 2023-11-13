@@ -68,7 +68,7 @@ const information = {
       name: "Screen Sharing tool",
       description:
         "A screen sharing tool using Java is a software application that allows one user to share their computer screen with another user over the internet. The application captures screenshots of the host's screen at regular intervals and sends them to the client in real-time, allowing the client to see the host's screen as if they were sitting in front of it.",
-      techStack: ["Jave", "Swing"],
+      techStack: ["Java", "Swing"],
       image: screen,
     },
     {
