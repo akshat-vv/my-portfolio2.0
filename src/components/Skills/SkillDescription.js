@@ -5,7 +5,7 @@ const SkillDescription = () => {
   return (
     <div className="sd-container">
       <div className="sd-title">
-        What do I <span>Help</span> ?
+       <span>About</span> Me
       </div>
       <div className="sd-desc">
         Skilled and experienced frontend developer with a strong background in

@@ -6,6 +6,10 @@ import github from "../../img/github.png";
 import linkedin from "../../img/LinkedInNew.png";
 import ReactTyped from "react-typed";
 
+const openLink = (url) =>{
+  window.open(url);
+}
+
 export const Header = ({ info }) => {
 
   const { role } = info.user;
@@ -30,8 +34,8 @@ export const Header = ({ info }) => {
           />
         </div>
         <div className="h-icons">
-          <img src={linkedin} alt="" />
-          <img src={github} alt="" />
+          <img src={linkedin} alt="" onClick={()=>openLink('https://www.linkedin.com/in/akshat-vijayvergiya-203bbb127/')}/>
+          <img src={github} alt="" onClick={()=>openLink('https://github.com/akshat-vv')}/>
         </div>
       </div>
       <div className="h-right-section">

@@ -9,12 +9,13 @@
 }
 
 .w-title {
+  color: black;
   font-size: 49px;
-  color: var(--blue);
-
   span {
-    color: black;
+    // color: black;
     font-weight: 600;
+    font-size: 49px;
+    color: var(--blue);
   }
 }
 
