@@ -13,7 +13,7 @@ const Work = ({ info }) => {
   return (
     <div className="w-container">
       <div className="w-title">
-        Work <span>- Life - </span>Balance
+        Work <span>History</span>
       </div>
       <div className="w-content">
         {info.work.map((work, index) => {
