@@ -29,9 +29,20 @@ const information = {
   },
   work: [
     {
+      role: "Frontend Engineer",
+      company: "The Hut Group",
+      time: "July 2024 - Present",
+      desc: [
+        "Developed and maintained multi-tenant websites, implementing reusable and adaptable features across various brands",
+        "Reduced code complexity and improved frontend stability by 20% through performance optimizations and accessibility fixes",
+        "Implemented theme-based customizations, enhancing brand-specific interfaces and boosting user engagement by 15%.",
+        "Collaborated with cross-functional teams to deliver scalable, user-centric solutions on tight deadlines."
+      ]
+    },
+    {
       role: "Software Developer",
       company: "Amdocs",
-      time: "April 2022 - Present",
+      time: "April 2022 - June 2024",
       desc: [
         "Developing and maintaining dynamic and responsive user interfaces using React.js, contributing to the overall improvement of the user experience.",
         "Collaborating with cross-functional teams, including designers and back-end developers, to understand project requirements and implement front-end solutions.",

@@ -16,7 +16,7 @@ const Work = ({ info }) => {
         Work <span>History</span>
       </div>
       <div className="w-content">
-        {info.work.map((work, index) => {
+        {info.work.slice(0,3).map((work, index) => {
           return (
             <WorkCard
               work={work}
