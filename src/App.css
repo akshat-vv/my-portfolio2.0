@@ -14,20 +14,35 @@
   src: local('Hammersmith One'), url(./fonts/HammersmithOne.ttf) format('truetype');
 }
 
-/* CSS Variables */
+/* CSS Variables - Cyberpunk Dev Theme */
 :root {
-  --blue: #009398;
-  --blue-dark: #007a7f;
-  --yellow: #F5C32C;
-  --orange: #FCA61F;
-  --black: #242D49;
+  --cyber-blue: #00FFFF;
+  --cyber-purple: #9933FF;
+  --cyber-pink: #FF66CC;
+  --cyber-yellow: #FFDD33;
+  
+  --primary: var(--cyber-blue);
+  --primary-dark: #00CCCC;
+  --primary-light: #66FFFF;
+  
+  --accent: var(--cyber-pink);
+  --accent-dark: #CC3399;
+  --accent-light: #FF99DD;
+  
+  --black: #0A0A0A;
+  --dark-blue: #0D1B3E;
   --gray: #788097;
-  --blueCard: #DDF8FE;
-  --purple: rgb(238 210 255);
-  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
-  --orangeCard: rgba(252, 166, 31, 0.45);
-  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
-  --blueGradient: linear-gradient(180deg, #009398 0%, #4DBABE 100%);
+  --boxShadow: 0px 3px 6px rgba(0, 255, 255, 0.3);
+  --neonShadow: 0 0 8px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.3);
+  --neonTextShadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.3);
+  --primaryGradient: linear-gradient(90deg, var(--cyber-blue) 0%, var(--cyber-purple) 100%);
+  
+  /* Dark theme colors */
+  --dark-bg: #0D1B3E;
+  --dark-surface: #0F1C3F;
+  --dark-text-primary: #FFFFFF;
+  --dark-text-secondary: #CCCCCC;
+  --dark-border: #333333;
 }
 
 /* Global Styles */
@@ -43,12 +58,15 @@ html {
 
 body {
   font-family: 'Jost', sans-serif;
-  color: var(--black);
+  color: var(--dark-text-primary);
+  background-color: var(--dark-bg);
   overflow-x: hidden;
 }
 
 .App {
   overflow: hidden;
+  background-color: var(--dark-bg);
+  position: relative;
 }
 
 /* Button Styles */
@@ -58,7 +76,9 @@ body {
   color: white;
   font-size: 16px;
   padding: 12px 25px;
-  background: linear-gradient(180deg, #009398 0%, #4DBABE 100%);
+  background: var(--primary);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   font-weight: 500;
   font-family: "Jost";
@@ -68,21 +88,23 @@ body {
 }
 
 .button:hover {
-  background: white;
-  color: var(--blue);
-  border: 1px solid var(--blue);
+  background: var(--dark-bg);
+  color: var(--primary);
+  border: 2px solid var(--primary);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--neonShadow);
 }
 
 .button.secondary {
   background: transparent;
-  color: var(--blue);
-  border: 1px solid var(--blue);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 8px rgba(255, 102, 204, 0.5);
 }
 
 .button.secondary:hover {
-  background: rgba(0, 147, 152, 0.1);
+  background: rgba(255, 0, 255, 0.1);
+  box-shadow: 0 0 12px rgba(255, 102, 204, 0.6);
 }
 
 /* Loading Overlay */
@@ -92,7 +114,7 @@ body {
 }
 
 .App ._loading_overlay_wrapper ._loading_overlay_content {
-  color: var(--blue);
+  color: var(--primary);
 }
 
 /* Scroll to Top Button */
@@ -102,7 +124,8 @@ body {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: var(--blue);
+  background-color: var(--primary);
+  box-shadow: var(--neonShadow);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -116,7 +139,7 @@ body {
 }
 
 .scroll-to-top:hover {
-  background-color: var(--blue-dark);
+  background-color: var(--primary-dark);
   transform: translateY(-5px);
 }
 
