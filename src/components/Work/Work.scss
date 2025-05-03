@@ -1,148 +1,246 @@
 .w-container {
-  display: flex;
-  max-width: 100%;
-  margin: 100px 100px 60px 100px;
+  padding: 80px 100px;
   font-family: "Jost", sans-serif;
-  gap: 40px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.w-title {
-  color: black;
-  font-size: 49px;
-  span {
-    // color: black;
-    font-weight: 600;
-    font-size: 49px;
-    color: var(--blue);
+  background-color: #f9f9f9;
+  
+  @media screen and (max-width: 768px) {
+    padding: 60px 20px;
   }
 }
 
-.w-content {
+.w-header {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
   justify-content: center;
-}
-
-.w-card {
-  width: 350px;
-  height: 150px;
-  background: #ffffff;
-  box-shadow: 0px 3px 9px rgba(77, 186, 190, 0.28);
-  border-radius: 17px;
-  display: flex;
-  transition: transform 0.3s;
-  flex-direction: column;
-  gap: 5px;
-  padding: 11px;
-
-  .card-title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.9rem;
-    line-height: 165.52%;
+  margin-bottom: 50px;
+  
+  .w-icon {
+    font-size: 2.5rem;
+    color: var(--blue);
+    margin-right: 15px;
   }
-
-  .card-line {
-    width: 190px;
-    height: 3px;
-    background: var(--blue);
-  }
-
-  .card-company {
-    font-weight: 300;
-    font-size: 1.3rem;
-    line-height: 165.52%;
-  }
-
-  .card-date {
-    font-weight: 200;
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 165.52%;
-  }
-}
-
-.w-card:hover {
-  transform: scale(1.03);
-
-  .card-line {
-    width: 250px;
-    transition: 1s;
-  }
-}
-
-.isSelected {
-  background: linear-gradient(180deg, #009398 0%, #4dbabe 100%);
-  * {
-    color: #ffffff;
-  }
-
-  .card-line {
-    background: #ffffff;
-  }
-}
-
-.w-card-out {
-  // border: 2px solid black;
-  // border-radius: 27px;
-  // padding: 15px;
-}
-
-.w-desc-container {
-  background: #ffffff;
-  box-shadow: 0px 3px 21px rgba(77, 186, 190, 0.28);
-  border-radius: 17px;
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  max-height: 100%;
-  transition: max-height 3s ease-out;
-
-  .w-desc {
-    line-height: 2;
-  }
-}
-
-.w-desc-title-container {
-  background: linear-gradient(180deg, #009398 0%, #4dbabe 100%);
-  padding: 10px;
-  border-radius: 10px;
-  color: #ffffff;
-  margin-bottom: 10px;
-
-  .w-desc-title {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 579px) {
-  .w-container {
-    margin: 100px 21px 50px 21px;
-  }
-  .w-content {
-    flex-direction: column;
-  }
-
+  
   .w-title {
-    font-size: 37px;
-  }
-
-  .w-card {
-    width: 288px;
-
-    .card-title {
-      font-size: 27.43px;
+    color: #333;
+    font-size: 3rem;
+    margin: 0;
+    
+    span {
+      font-weight: 600;
+      font-size: 3rem;
+      color: var(--blue);
+    }
+    
+    @media screen and (max-width: 768px) {
+      font-size: 2.5rem;
+      
+      span {
+        font-size: 2.5rem;
+      }
     }
   }
 }
 
-@media screen and (min-width: 580px) and (max-width: 1446px) {
+.w-timeline {
+  position: relative;
+  margin: 0 auto 50px;
+  max-width: 1000px;
+  
+  .w-timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--blue), #4dbabe);
+    transform: translateX(-50%);
+    
+    @media screen and (max-width: 768px) {
+      left: 30px;
+    }
+  }
+}
+
+.w-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.w-card {
+  position: relative;
+  width: 45%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:nth-child(odd) {
+    align-self: flex-start;
+    margin-right: auto;
+    
+    .w-card-dot {
+      right: -42px;
+    }
+    
+    .card-indicator {
+      right: -15px;
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    }
+  }
+  
+  &:nth-child(even) {
+    align-self: flex-end;
+    margin-left: auto;
+    
+    .w-card-dot {
+      left: -42px;
+    }
+    
+    .card-indicator {
+      left: -15px;
+      clip-path: polygon(0 0, 0 100%, 100% 50%);
+    }
+  }
+  
+  .w-card-dot {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid var(--blue);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .card-indicator {
+    position: absolute;
+    top: 50%;
+    width: 15px;
+    height: 30px;
+    background: var(--blue);
+    transform: translateY(-50%);
+  }
+  
+  .w-card-content {
+    position: relative;
+  }
+  
+  .card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-company {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--blue);
+    
+    svg {
+      margin-right: 8px;
+    }
+  }
+  
+  .card-date {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #777;
+    
+    svg {
+      margin-right: 8px;
+    }
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  &.isSelected {
+    background: linear-gradient(180deg, #009398 0%, #4dbabe 100%);
+    
+    .card-title, .card-company, .card-date, svg {
+      color: white;
+    }
+    
+    .w-card-dot {
+      background: var(--blue);
+      border-color: white;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    
+    &:nth-child(odd), &:nth-child(even) {
+      .w-card-dot {
+        left: -42px;
+      }
+      
+      .card-indicator {
+        left: -15px;
+        clip-path: polygon(0 0, 0 100%, 100% 50%);
+      }
+    }
+  }
+}
+
+.w-desc-container {
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+  transition: all 0.3s ease;
+  
+  .w-desc-title-container {
+    background: linear-gradient(180deg, #009398 0%, #4dbabe 100%);
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: white;
+    margin-bottom: 20px;
+    
+    .w-desc-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+  
+  .w-desc {
+    ul {
+      padding-left: 0;
+      list-style-type: none;
+      
+      li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        
+        .check-icon {
+          color: var(--blue);
+          margin-right: 10px;
+          margin-top: 3px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
   .w-container {
-    margin: 100px 30px;
+    padding: 60px 30px;
   }
 }

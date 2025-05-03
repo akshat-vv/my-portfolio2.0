@@ -1,8 +1,30 @@
 import React from "react";
-import information from "../../constants/global";
 import "./Project.scss";
 import ProjectCard from "./ProjectCard";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+// Custom arrows for the slider
+const PrevArrow = (props) => {
+  const { className, onClick } = props;
+  return (
+    <div className={`${className} custom-arrow prev-arrow`} onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronLeft} />
+    </div>
+  );
+};
+
+const NextArrow = (props) => {
+  const { className, onClick } = props;
+  return (
+    <div className={`${className} custom-arrow next-arrow`} onClick={onClick}>
+      <FontAwesomeIcon icon={faChevronRight} />
+    </div>
+  );
+};
 
 const Project = ({ info }) => {
   var settings = {
@@ -11,42 +33,31 @@ const Project = ({ info }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // prevArrow: ,
-    // nextArrow: ,
-    // responsive: [
-    //   {
-    //     breakpoint: 1200,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 1180,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-
-    //   {
-    //     breakpoint: 664,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+  
   return (
-    <div className="project-section">
+    <div className="project-section" id="projects">
+      <div className="project-heading">
+        <h2>My <span>Projects</span></h2>
+      </div>
       <div className="project-container">
-        <div className="project-heading">
-          My <span> Projects</span>
-        </div>
         <Slider {...settings}>
-          {info.projects.map((project) => {
-            return <ProjectCard project={project} />;
+          {info.projects.map((project, index) => {
+            return <ProjectCard key={index} project={project} />;
           })}
         </Slider>
       </div>

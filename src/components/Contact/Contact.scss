@@ -1,86 +1,242 @@
 .contact-container {
+  position: relative;
   width: 100%;
-  height: 60vh;
-  padding: 0 70px;
-  background: var(--blueGradient);
+  min-height: 80vh;
+  padding: 80px 0;
   background-color: var(--blue);
   margin-top: 70px;
   font-family: "Jost";
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   background-image: url("../../img/contactBG.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
+  
+  .contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 147, 152, 0.9) 0%, rgba(77, 186, 190, 0.8) 100%);
+    z-index: 1;
+  }
+  
+  .contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
 
   .contact-left {
-    // flex: 1;
-    .contact-text {
-      font-size: 4rem;
-      color: white;
+    flex: 1;
+    color: white;
+    padding-right: 50px;
+    
+    @media screen and (max-width: 992px) {
+      padding-right: 0;
+      text-align: center;
+    }
+    
+    .contact-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 80px;
+        height: 3px;
+        background: white;
+        
+        @media screen and (max-width: 992px) {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    
+    .contact-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+      .contact-info-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1.1rem;
+        
+        svg {
+          font-size: 1.5rem;
+          background: rgba(255, 255, 255, 0.2);
+          padding: 10px;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+        }
+        
+        @media screen and (max-width: 992px) {
+          justify-content: center;
+        }
+      }
     }
   }
 
   .contact-right {
-    flex: 0.5;
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    
     form {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 42vh;
-
-      align-items: center;
-
-      .button {
-        background: white;
-        color: var(--blue);
+      gap: 20px;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      
+      .form-group {
+        position: relative;
+        
+        .error-message {
+          color: #e74c3c;
+          font-size: 0.85rem;
+          margin-top: 5px;
+        }
       }
-
+      
       .user {
         width: 100%;
-        height: 40px;
-        border-radius: 10px;
-        padding-left: 20px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 0 15px;
+        font-size: 1rem;
+        border: 1px solid #e0e0e0;
+        transition: border-color 0.3s ease;
+        font-family: "Jost", sans-serif;
+        
+        &:focus {
+          outline: none;
+          border-color: var(--blue);
+        }
+        
+        &.error {
+          border-color: #e74c3c;
+        }
+      }
+      
+      #message {
+        height: 150px;
+        padding: 15px;
+        resize: none;
+      }
+      
+      .button {
         display: flex;
         align-items: center;
-        border: none;
-        // line-height: 3;
-      }
-    }
-  }
-
-  #message {
-    height: 150px;
-    padding-top: 10px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .contact-container {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    // padding-bottom: 50px;
-    .contact-left {
-      display: flex;
-      justify-content: center;
-
-      .contact-text {
-        font-size: 3rem;
+        justify-content: center;
+        gap: 10px;
+        height: 50px;
+        font-size: 1rem;
+        background: var(--blue);
         color: white;
-        line-height: 2.4;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background: darken(#009398, 10%);
+          transform: translateY(-2px);
+        }
       }
     }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .contact-container .contact-left .contact-text {
-    font-size: 2rem;
   }
 }
 
 .modal {
-  background-color: rgba(92, 92, 92, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    
+    h3 {
+      color: var(--blue);
+      margin-bottom: 15px;
+    }
+    
+    p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #555;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: darken(#009398, 10%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 60px 0;
+    
+    .contact-left {
+      .contact-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    .contact-right form {
+      padding: 30px 20px;
+    }
+  }
 }

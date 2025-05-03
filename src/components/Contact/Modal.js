@@ -1,25 +1,31 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Modal = ({ setShowModal }) => {
   return (
-    <div className="modal fade show d-block" tabIndex={-1}>
-      <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div className="modal-content bg-white border border-the-primary">
-          <div className="modal-body text-center py-4">
-            <p>
-              We've received your inquiry, we'll get back to you as soon as
-              possible. Thank you!"
-            </p>
-            <button
-              type="button"
-              onClick={() => setShowModal(false)}
-              className="btn btn-dark-moderate-orange px-5 button"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
+    <div className="modal">
+      <div className="modal-content">
+        <FontAwesomeIcon 
+          icon={faCheckCircle} 
+          style={{ 
+            fontSize: '3rem', 
+            color: 'var(--blue)', 
+            marginBottom: '15px' 
+          }} 
+        />
+        <h3>Thank You!</h3>
+        <p>
+          I've received your message and will get back to you as soon as
+          possible. Thank you for reaching out!
+        </p>
+        <button
+          type="button"
+          onClick={() => setShowModal(false)}
+          className="button"
+        >
+          <FontAwesomeIcon icon={faTimes} /> Close
+        </button>
       </div>
     </div>
   );

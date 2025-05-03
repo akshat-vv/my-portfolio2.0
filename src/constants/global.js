@@ -5,26 +5,27 @@ import toDo from "../img/to-do.jpeg";
 
 const information = {
   text: {
-    heyText: "Hey, I am",
+    heyText: "Hello, I'm",
     knowMoreText: "Know more about me",
   },
   user: {
     name: "Akshat Vijayvergiya",
-    role: ["Frontend Developer", "UI Developer", "Graphic Designer"],
+    role: ["Frontend Developer", "UI Designer"],
+    about: "Frontend developer with a keen eye for design and a commitment to creating exceptional user experiences. I transform ideas into interactive and visually appealing web applications."
   },
   skills: {
     description:
-      "Skilled and experienced frontend developer with a strong background increating visually appealing and user-friendly websites and web applications. Proficient in React, HTML, CSS, and JavaScript.Committed to staying current with the latest web development technologies and trends.",
+      "Skilled and experienced frontend developer with a strong background in creating visually appealing and user-friendly websites and web applications. Proficient in React, HTML, CSS, and JavaScript. Committed to staying current with the latest web development technologies and trends.",
     skillsList: [
-      { name: "React Js", experties: 60 },
-      { name: "HTML 5", experties: 70 },
-      { name: "CSS 3", experties: 90 },
-      { name: "Redux", experties: 65 },
-      { name: "Material UI", experties: 45 },
-      { name: "Git", experties: 60 },
-      { name: "Perforce", experties: 70 },
-      { name: "Figma", experties: 90 },
-      { name: "Photoshop", experties: 60 },
+      { name: "React Js", experties: 60, icon: "fab fa-react" },
+      { name: "Next Js", experties: 30, icon: "fab fa-react" },
+      { name: "HTML 5", experties: 70, icon: "fab fa-html5" },
+      { name: "CSS 3", experties: 90, icon: "fab fa-css3-alt" },
+      { name: "Redux", experties: 65, icon: "fas fa-code-branch" },
+      { name: "Tailwind", experties: 45, icon: "fas fa-palette" },
+      { name: "Git", experties: 80, icon: "fab fa-git-alt" },
+      { name: "Perforce", experties: 70, icon: "fas fa-code" },
+      { name: "Figma", experties: 90, icon: "fab fa-figma" }
     ],
   },
   work: [
@@ -77,18 +78,22 @@ const information = {
   ],
   projects: [
     {
-      name: "Screen Sharing tool",
+      name: "Screen Sharing Tool",
       description:
         "A screen sharing tool using Java is a software application that allows one user to share their computer screen with another user over the internet. The application captures screenshots of the host's screen at regular intervals and sends them to the client in real-time, allowing the client to see the host's screen as if they were sitting in front of it.",
       techStack: ["Java", "Swing"],
       image: screen,
+      github: "https://github.com/akshat-vv",
+      demo: "#"
     },
     {
       name: "Audio Book Library",
       description:
-        "An audio book library project made using React, HTML, CSS, and JavaScript is a web application that allows users to access and listen to audio books.The application uses JavaScript to handle the functionality of the application, such as routing, user authentication, and audio playback.",
+        "An audio book library project made using React, HTML, CSS, and JavaScript is a web application that allows users to access and listen to audio books. The application uses JavaScript to handle the functionality of the application, such as routing, user authentication, and audio playback.",
       techStack: ["React", "HTML", "CSS", "JS"],
       image: audio,
+      github: "https://github.com/akshat-vv",
+      demo: "#"
     },
     {
       name: "Weather App",
@@ -96,15 +101,24 @@ const information = {
         "A weather app using React is a web or mobile application that allows users to view current weather information and forecast for a specific location.",
       techStack: ["HTML", "CSS", "JS"],
       image: weather,
+      github: "https://github.com/akshat-vv",
+      demo: "#"
     },
     {
       name: "To-Do List App",
       description:
-        "A to-do list app using React Native is a mobile application that allows users to create and manage a list of tasks, or to- do's, that they need to complete. The app would be built using the React Native framework, which allows developers to use React to build mobile apps for iOS and Android.",
+        "A to-do list app using React Native is a mobile application that allows users to create and manage a list of tasks, or to-do's, that they need to complete. The app would be built using the React Native framework, which allows developers to use React to build mobile apps for iOS and Android.",
       techStack: ["React Native", "HTML", "CSS", "JS"],
       image: toDo,
+      github: "https://github.com/akshat-vv",
+      demo: "#"
     },
   ],
+  contact: {
+    email: "akshatvijay14@gmail.com",
+    phone: "+91 8770316441",
+    location: "Pune, India"
+  }
 };
 
 export default information;
