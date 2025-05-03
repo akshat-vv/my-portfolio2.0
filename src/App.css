@@ -38,7 +38,7 @@
   --primaryGradient: linear-gradient(90deg, var(--cyber-blue) 0%, var(--cyber-purple) 100%);
   
   /* Dark theme colors */
-  --dark-bg: #0D1B3E;
+  --dark-bg: #091125;
   --dark-surface: #0F1C3F;
   --dark-text-primary: #FFFFFF;
   --dark-text-secondary: #CCCCCC;

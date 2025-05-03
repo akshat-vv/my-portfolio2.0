@@ -4,20 +4,6 @@
   background-color: var(--dark-bg);
   position: relative;
   
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-      linear-gradient(to right, rgba(13, 27, 62, 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(13, 27, 62, 0.3) 1px, transparent 1px);
-    background-size: 30px 30px;
-    z-index: 0;
-    pointer-events: none;
-  }
   
   @media screen and (max-width: 768px) {
     padding: 60px 20px;
