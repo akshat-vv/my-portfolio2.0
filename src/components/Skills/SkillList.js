@@ -8,8 +8,8 @@ const SkillList = ({ skills }) => {
         <span>Skill</span> set
       </div>
       <div className="sl-list">
-        {skills.map((skill) => {
-          return <SkillListItem skill={skill} />;
+        {skills.map((skill, index) => {
+          return <SkillListItem key={index} skill={skill} />;
         })}
       </div>
     </div>

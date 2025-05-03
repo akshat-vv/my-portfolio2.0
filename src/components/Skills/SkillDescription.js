@@ -27,8 +27,10 @@ const SkillDescription = () => {
         skills and collaborate with others to elevate digital experiences.
       </div>
       <a href={resumePDF} download>
-        <button className="button resume-btn">Download Resume</button>
-        </a>
+        <button className="button primary neon-button resume-btn">
+          Download Resume
+        </button>
+      </a>
     </div>
   );
 };
