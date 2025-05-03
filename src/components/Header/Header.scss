@@ -131,6 +131,10 @@
         &.top-left {
           top: 20px;
           left: 20px;
+
+          @media screen and (max-width: 768px) {
+            display: none; /* Hide code elements on mobile */
+          }
         }
         
         &.top-right {
@@ -146,7 +150,13 @@
         &.bottom-right {
           bottom: 20px;
           right: 20px;
+
+          @media screen and (max-width: 768px) {
+            display: none; /* Hide code elements on mobile */
+          }
         }
+        
+
       }
       
       .placeholder-text {
