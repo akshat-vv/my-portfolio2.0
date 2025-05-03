@@ -1,7 +1,12 @@
 import React from "react";
-import Resume from "./Resume.pdf";
+import resumePDF from "./Resume.pdf";
 
 const SkillDescription = () => {
+
+  const downloadResume = () => {
+    window.open(resumePDF, '_blank');
+  };
+
   return (
     <div className="sd-container">
       <div className="sd-title">
@@ -21,6 +26,9 @@ const SkillDescription = () => {
         across diverse browsers and devices. I am always eager to learn new
         skills and collaborate with others to elevate digital experiences.
       </div>
+      <a href={resumePDF} download>
+        <button className="button resume-btn">Download Resume</button>
+        </a>
     </div>
   );
 };
