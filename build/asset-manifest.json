@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/my-portfolio2.0/static/css/main.1ba515c4.css",
+    "main.js": "/my-portfolio2.0/static/js/main.287041db.js",
+    "static/media/av-head-web.png": "/my-portfolio2.0/static/media/av-head-web.d85ae60fca53b41b1273.png",
+    "static/media/weather.jpeg": "/my-portfolio2.0/static/media/weather.f85c00ae2e500acc3e3c.jpeg",
+    "static/media/audio.jpeg": "/my-portfolio2.0/static/media/audio.84a68c10ed483996e2e5.jpeg",
+    "static/media/to-do.jpeg": "/my-portfolio2.0/static/media/to-do.2a1b1162b2400425aa8b.jpeg",
+    "static/media/av-head-mob.png": "/my-portfolio2.0/static/media/av-head-mob.043ebb656de5448e0545.png",
+    "static/media/Jost.ttf": "/my-portfolio2.0/static/media/Jost.6de07354a7108bacf175.ttf",
+    "static/media/av-head-bg-new.png": "/my-portfolio2.0/static/media/av-head-bg-new.d0f84748baa974aad084.png",
+    "static/media/JosefinSans.ttf": "/my-portfolio2.0/static/media/JosefinSans.1bfcfba29eda50476f98.ttf",
+    "static/media/contactBG.png": "/my-portfolio2.0/static/media/contactBG.b574eaa0d6b1259f9b9c.png",
+    "static/media/HammersmithOne.ttf": "/my-portfolio2.0/static/media/HammersmithOne.d81de6e618c5a022ebcc.ttf",
+    "static/media/screen.jpeg": "/my-portfolio2.0/static/media/screen.de4f24739acb70c17377.jpeg",
+    "static/media/Resume.pdf": "/my-portfolio2.0/static/media/Resume.ccab008a0bee92bc9dd1.pdf",
+    "static/media/slick.svg": "/my-portfolio2.0/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/my-portfolio2.0/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/my-portfolio2.0/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/my-portfolio2.0/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/my-portfolio2.0/index.html",
+    "main.1ba515c4.css.map": "/my-portfolio2.0/static/css/main.1ba515c4.css.map",
+    "main.287041db.js.map": "/my-portfolio2.0/static/js/main.287041db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ba515c4.css",
+    "static/js/main.287041db.js"
+  ]
+}
